@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Premium\ Photo\ _\ Food\ presentation\ background\ organic\ various\ exotic\ species\ on\ black\ slate\ board.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #0E2431;
+}
+
+/* Gradient Background */
+#grad1 {
+    /* background-color: #DCDDE0; */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Progressbar Styling */
+#progressbar {
+    margin: 30px 0;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+#progressbar .active {
+    color: #EF5C36;
+}
+
+#progressbar li {
+    list-style: none;
+    width: 25%;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#progressbar li:before {
+    content: "\2713"; /* Checkmark */
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+    background: lightgrey;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#progressbar li.active:before {
+    background: #EF5C36;
+}
+
+#progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: lightgrey;
+    position: absolute;
+    top: 25px;
+    left: -50%;
+    z-index: -1;
+}
+
+#progressbar li.active + li:after {
+    background: #EF5C36;
+}
+
+#progressbar li:first-child:after {
+    content: none;
+}
+
+/* Form Fieldsets */
+fieldset {
+    background: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: none;
+    position: relative;
+}
+
+fieldset:first-of-type {
+    display: block;
+}
+
+.form-card {
+    text-align: left;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #EF5C36;
+    outline: none;
+    box-shadow: 0 0 5px #EF5C36;
+}
+
+/* Buttons */
+.action-button {
+    background: #EF5C36;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: #EF5C36;
+}
+
+.action-button-previous {
+    background: #616161;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.action-button-previous:hover {
+    background: #333;
+}
+
+/* Success Message */
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-card {
+        padding: 10px 20px;
+    }
+
+    #progressbar li {
+        font-size: 10px;
+    }
+
+    #progressbar li:before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+}

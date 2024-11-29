@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> &lt;Code&amp;Crust.&gt;-Menu</title>
+  <link rel="icon" type="image/x-icon" href="cropped_image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="menu.css">
+  <script>
+    function addToCart(productName, price, description, image) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({
+            name: productName,
+            price: price,
+            description: description,
+            image: image
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        var name=prompt(`${productName} has been added to your cart!`);
+    }
+</script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">
+          <img style="border-radius: 50%; height:45px; width: 45px;" src="cropped_image.png">
+          &lt;Code&amp;Crust.&gt;</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">
+            <button class="nav-button">My Cart</button></a>
+          </a></li>
+        <li><a href="login.html">
+            <button class="nav-button">Login</button></a>
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+  
+    <h3 style="margin-top: 20%;font-weight: bold;font-family: serif;font-size: 50px; color: #0e2431;text-align: center;">
+      Our Menu
+    </h3>
+    <main>
+      <!-- Pasta Section -->
+      <header>
+        <h1>Pasta</h1>
+      </header>
+      <div class="product">
+        <img src="pastas/alfredo.jfif" alt="Alfredo Pasta">
+        <div class="product-details">
+          <h2>Alfredo Pasta</h2>
+          <p>Description: Creamy Alfredo pasta with a touch of herbs.</p>
+          <p>Price: $10</p>
+          <button onclick="addToCart('Alfredo Pasta', 10, 'Creamy Alfredo pasta with a touch of herbs.', 'pastas/alfredo.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pastas/cheese pasta.jfif" alt="Cheese Pasta">
+        <div class="product-details">
+          <h2>Cheese Pasta</h2>
+          <p>Description: Rich cheesy goodness in every bite.</p>
+          <p>Price: $12</p>
+          <button onclick="addToCart('Cheese Pasta', 12, 'Rich cheesy goodness in every bite.', 'pastas/cheese pasta.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pastas/Chicken Chow Mein Take-Out Style!.jfif" alt="Chicken Chow Mein">
+        <div class="product-details">
+          <h2>Chicken Chow Mein</h2>
+          <p>Description: Take-out style chicken chow mein noodles.</p>
+          <p>Price: $15</p>
+          <button onclick="addToCart('Chicken Chow Mein', 15, 'Take-out style chicken chow mein noodles.', 'pastas/Chicken Chow Mein Take-Out Style!.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pastas/Fettuccine Carbonara (No Cream).jfif" alt="Fettuccine Carbonara">
+        <div class="product-details">
+          <h2>Fettuccine Carbonara</h2>
+          <p>Description: Classic Italian pasta without cream.</p>
+          <p>Price: $14</p>
+          <button onclick="addToCart('Fettuccine Carbonara', 14, 'Classic Italian pasta without cream.', 'pastas/Fettuccine Carbonara (No Cream).jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pastas/italian special.jfif" alt="Italian Special Pasta">
+        <div class="product-details">
+          <h2>Italian Special Pasta</h2>
+          <p>Description: A mix of authentic Italian flavors.</p>
+          <p>Price: $16</p>
+          <button onclick="addToCart('Italian Special Pasta', 16, 'A mix of authentic Italian flavors.', 'pastas/italian special.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pastas/redsauce.jfif" alt="Red Sauce Pasta">
+        <div class="product-details">
+          <h2>Red Sauce Pasta</h2>
+          <p>Description: Tangy red sauce with a hint of spice.</p>
+          <p>Price: $13</p>
+          <button onclick="addToCart('Red Sauce Pasta', 13, 'Tangy red sauce with a hint of spice.', 'pastas/redsauce.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <!-- Pizza Section -->
+      <header>
+        <h1>Pizza</h1>
+      </header>
+      <div class="product">
+        <img src="pizza/bbq piza.jfif" alt="BBQ Pizza">
+        <div class="product-details">
+          <h2>BBQ Pizza</h2>
+          <p>Description: Smoky BBQ chicken on a crispy crust.</p>
+          <p>Price: $18</p>
+          <button onclick="addToCart('BBQ Pizza', 18, 'Smoky BBQ chicken on a crispy crust.', 'pizza/bbq piza.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pizza/chicken tikka pizza.jfif" alt="Chicken Tikka Pizza">
+        <div class="product-details">
+          <h2>Chicken Tikka Pizza</h2>
+          <p>Description: Spicy chicken tikka with tangy sauce.</p>
+          <p>Price: $20</p>
+          <button onclick="addToCart('Chicken Tikka Pizza', 20, 'Spicy chicken tikka with tangy sauce.', 'pizza/chicken tikka pizza.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pizza/chilli chicken pizza.jfif" alt="Chilli Chicken Pizza">
+        <div class="product-details">
+          <h2>Chilli Chicken Pizza</h2>
+          <p>Description: Fiery chilli chicken pizza with extra heat.</p>
+          <p>Price: $19</p>
+          <button onclick="addToCart('Chilli Chicken Pizza', 19, 'Fiery chilli chicken pizza with extra heat.', 'pizza/chilli chicken pizza.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pizza/mushroom pizza.jfif" alt="Mushroom Pizza">
+        <div class="product-details">
+          <h2>Mushroom Pizza</h2>
+          <p>Description: Earthy mushroom toppings with cheese.</p>
+          <p>Price: $16</p>
+          <button onclick="addToCart('Mushroom Pizza', 16, 'Earthy mushroom toppings with cheese.', 'pizza/mushroom pizza.jfif')">Add to Cart</button>
+        </div>
+      </div>
+      
+    
+      <div class="product">
+        <img src="pizza/pizza pockets.jfif" alt="Pizza Pockets">
+        <div class="product-details">
+          <h2>Pizza Pockets</h2>
+          <p>Description: Crispy, stuffed pockets filled with pizza flavors.</p>
+          <p>Price: $12</p>
+          <button onclick="addToCart('Pizza Pockets', 12,'Crispy, stuffed pockets filled with pizza flavors.','pizza/pizza pockets.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="pizza/saucages pizza.jfif" alt="Sausage Pizza">
+        <div class="product-details">
+          <h2>Sausage Pizza</h2>
+          <p>Description: Loaded with flavorful sausages and gooey cheese.</p>
+          <p>Price: $18</p>
+          <button onclick="addToCart('Sausage Pizza', 18,'Loaded with flavorful sausages and gooey cheese.','pizza/saucages pizza.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <!-- Burgers Section -->
+      <header>
+        <h1>Burgers</h1>
+      </header>
+      <div class="product">
+        <img src="burgers/BBQ Cheeseburgers.jfif" alt="BBQ Cheeseburger">
+        <div class="product-details">
+          <h2>BBQ Cheeseburger</h2>
+          <p>Description: Juicy burger topped with BBQ sauce and melted cheese.</p>
+          <p>Price: $10</p>
+          <button onclick="addToCart('BBQ Cheeseburger', 10,'Juicy burger topped with BBQ sauce and melted cheese.','burgers/BBQ Cheeseburgers.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="burgers/burgers.jfif" alt="Classic Burger">
+        <div class="product-details">
+          <h2>Classic Burger</h2>
+          <p>Description: The timeless burger experience with lettuce and tomato.</p>
+          <p>Price: $9</p>
+          <button onclick="addToCart('Classic Burger', 9,'The timeless burger experience with lettuce and tomato.','burgers/burgers.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="burgers/cheese burger.jfif" alt="Cheese Burger">
+        <div class="product-details">
+          <h2>Cheese Burger</h2>
+          <p>Description: A classic burger topped with melted cheese.</p>
+          <p>Price: $10</p>
+          <button onclick="addToCart('Cheese Burger', 10,' A classic burger topped with melted cheese.','burgers/cheese burger.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="burgers/Cheese Chicken Zinger Burger.jfif" alt="Cheese Chicken Zinger">
+        <div class="product-details">
+          <h2>Cheese Chicken Zinger</h2>
+          <p>Description: Crispy chicken zinger with creamy cheese.</p>
+          <p>Price: $12</p>
+          <button onclick="addToCart('Cheese Chicken Zinger', 12, 'Crispy chicken zinger with creamy cheese.','burgers/Cheese Chicken Zinger Burger.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="burgers/crack burgers -.jfif" alt="Crack Burger">
+        <div class="product-details">
+          <h2>Crack Burger</h2>
+          <p>Description: A bold, flavorful burger bursting with spices.</p>
+          <p>Price: $14</p>
+          <button onclick="addToCart('Crack Burger', 14,'A bold, flavorful burger bursting with spices.','burgers/crack burgers -.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="burgers/Zinger Burgers.jfif" alt="Zinger Burger">
+        <div class="product-details">
+          <h2>Zinger Burger</h2>
+          <p>Description: Crispy fried chicken burger with a spicy kick.</p>
+          <p>Price: $11</p>
+          <button onclick="addToCart('Zinger Burger', 11,'Crispy fried chicken burger with a spicy kick.','burgers/Zinger Burgers.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <!-- Sandwiches Section -->
+      <header>
+        <h1>Sandwiches</h1>
+      </header>
+      <div class="product">
+        <img src="sandwiches/cheese sandwich.jfif" alt="Cheese Sandwich">
+        <div class="product-details">
+          <h2>Cheese Sandwich</h2>
+          <p>Description: A warm, grilled sandwich filled with cheese.</p>
+          <p>Price: $8</p>
+          <button onclick="addToCart('Cheese Sandwich', 8,'A warm, grilled sandwich filled with cheese.','sandwiches/cheese sandwich.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="sandwiches/chick n cheese.jfif" alt="Chicken & Cheese Sandwich">
+        <div class="product-details">
+          <h2>Chicken & Cheese Sandwich</h2>
+          <p>Description: Savory chicken and melted cheese in every bite.</p>
+          <p>Price: $10</p>
+          <button onclick="addToCart('Chicken & Cheese Sandwich', 10,'Savory chicken and melted cheese in every bite.','sandwiches/chick n cheese.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="sandwiches/club sandwich.jfif" alt="Club Sandwich">
+        <div class="product-details">
+          <h2>Club Sandwich</h2>
+          <p>Description: Triple-layer sandwich with chicken, egg, and veggies.</p>
+          <p>Price: $12</p>
+          <button onclick="addToCart('Club Sandwich', 12,' Triple-layer sandwich with chicken, egg, and veggies.','sandwiches/club sandwich.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="sandwiches/hot grilled sandwich.jfif" alt="Hot Grilled Sandwich">
+        <div class="product-details">
+          <h2>Hot Grilled Sandwich</h2>
+          <p>Description: Toasted sandwich with a hot and spicy filling.</p>
+          <p>Price: $9</p>
+          <button onclick="addToCart('Hot Grilled Sandwich', 9,'Toasted sandwich with a hot and spicy filling.','sandwiches/hot grilled sandwich.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="sandwiches/majesty beef sandwich.jfif" alt="Majesty Beef Sandwich">
+        <div class="product-details">
+          <h2>Majesty Beef Sandwich</h2>
+          <p>Description: Premium beef sandwich with rich flavors.</p>
+          <p>Price: $13</p>
+          <button onclick="addToCart('Majesty Beef Sandwich', 13,' Premium beef sandwich with rich flavors.','sandwiches/majesty beef sandwich.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product">
+        <img src="sandwiches/mayyonaise sandwich.jfif" alt="Mayonnaise Sandwich">
+        <div class="product-details">
+          <h2>Mayonnaise Sandwich</h2>
+          <p>Description: Simple yet delicious mayo-filled sandwich.</p>
+          <p>Price: $7</p>
+          <button onclick="addToCart('Mayonnaise Sandwich', 7,'Simple yet delicious mayo-filled sandwich.','sandwiches/mayyonaise sandwich.jfif')">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+  <script>
+    let nav = document.querySelector("nav");
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+  <div class="footer-dark">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Dine In</a></li>
+              <li><a href="#">Take Away</a></li>
+              <li><a href="#">Home Delivery</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>&lt;Code&amp;Crust.&gt;</h3>
+            <p style="font-size: 20px;"> Where innovation meets creativity. Delivering tech solutions with a slice of
+              passion."</p>
+          </div>
+          <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+              href="#"><i class="icon ion-social-instagram"></i></a></div>
+        </div>
+        <p class="copyright">&lt;Code&amp;Crust.&gt; © 2018</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
